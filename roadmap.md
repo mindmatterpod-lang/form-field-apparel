@@ -1,0 +1,2 @@
+- [ ] Create a distinctive branded apparel storefront with product browsing and cart interactions; leave Shopify connection and live checkout for later.
+- [ ] Verify the storefront preview and current build status.
