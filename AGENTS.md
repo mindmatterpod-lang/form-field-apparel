@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Storefront Structure
+- Keep the storefront at `/` until separate content pages are requested; defer Shopify and live checkout unless the user asks to connect them.
