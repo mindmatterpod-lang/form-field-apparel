@@ -78,21 +78,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "OSVRYN — Everyday Layers" },
-      { name: "description", content: "Considered outerwear, trackwear and everyday essentials from OSVRYN." },
-      { name: "author", content: "Lovable" },
+      { title: "OSVRYN | Premium jackets, tracksuits & shirts, shipped worldwide" },
+      { name: "description", content: "Premium outerwear, trackwear and shirts designed for everyday movement. Worldwide shipping and 30-day returns." },
+      { name: "theme-color", content: "#14161a" },
+      { name: "author", content: "OSVRYN" },
       { property: "og:title", content: "OSVRYN — Everyday Layers" },
       { property: "og:description", content: "Considered outerwear, trackwear and everyday essentials from OSVRYN." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bebas+Neue&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=DM+Sans:wght@400;500;700&display=swap",
       },
       {
         rel: "stylesheet",
