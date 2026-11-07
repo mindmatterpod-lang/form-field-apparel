@@ -92,7 +92,8 @@ function Storefront() {
         A considered uniform for wherever the day goes
       </div>
 
-      <header className="shop-shell flex h-[68px] items-center justify-between border-b px-4 ink-rule sm:px-8">
+      <div className="border-b ink-rule">
+      <header className="shop-shell relative flex h-[68px] items-center justify-between px-4 sm:px-8">
         <nav className="hidden items-center gap-7 md:flex" aria-label="Shop by category">
           <a href="#collection" onClick={() => setCategory("Jackets")} className="text-xs font-semibold uppercase tracking-[0.08em] transition-opacity hover:opacity-60">Outerwear</a>
           <a href="#collection" onClick={() => setCategory("Trackwear")} className="text-xs font-semibold uppercase tracking-[0.08em] transition-opacity hover:opacity-60">Trackwear</a>
@@ -111,15 +112,16 @@ function Storefront() {
           </Button>
         </div>
       </header>
+      </div>
 
       {searchOpen && (
-        <div className="shop-shell border-b px-4 py-4 ink-rule sm:px-8">
+        <div className="border-b ink-rule"><div className="shop-shell px-4 py-4 sm:px-8">
           <label htmlFor="product-search" className="sr-only">Search products</label>
           <div className="flex items-center gap-3">
             <Search className="size-4 text-muted-foreground" />
             <input id="product-search" autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Find your next layer" className="w-full bg-transparent py-1 text-sm outline-none placeholder:text-muted-foreground" />
           </div>
-        </div>
+        </div></div>
       )}
 
       <section id="top" className="shop-shell grid grid-cols-1 gap-6 px-4 pb-12 pt-7 sm:px-8 lg:grid-cols-[0.83fr_1.17fr] lg:gap-10 lg:pb-16 lg:pt-10">
@@ -129,7 +131,7 @@ function Storefront() {
             The everyday collection · 01 / 04
           </div>
           <div className="max-w-xl py-10 lg:py-0">
-            <h1 className="display-type max-w-[9ch] text-[76px] leading-[0.83] sm:text-[92px] lg:text-[clamp(100px,12vw,168px)]">
+            <h1 className="display-type max-w-[9ch] text-[76px] leading-[0.83] sm:text-[92px] lg:text-[clamp(100px,11.3vw,160px)]">
               MADE FOR<br />MOVEMENT.
             </h1>
             <p className="mt-7 max-w-[350px] text-[15px] leading-6 text-muted-foreground">
@@ -146,7 +148,7 @@ function Storefront() {
 
         <div className="hero-photo min-h-[420px] lg:min-h-[560px]">
           <img src={outerwearImage} alt="Model wearing the OSVRYN Form Bomber" width={1200} height={1200} fetchPriority="high" />
-          <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-primary-foreground sm:bottom-6 sm:left-6 sm:right-6">
+          <div className="hero-caption absolute bottom-4 left-4 right-4 flex items-end justify-between text-primary-foreground sm:bottom-6 sm:left-6 sm:right-6">
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.16em]">01 — Outerwear, reworked</p>
               <p className="display-type mt-1 text-4xl leading-none sm:text-5xl">THE FORM BOMBER</p>
