@@ -12,6 +12,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { StoreProvider } from "../lib/store";
+import { SiteLayout } from "../components/storefront";
 
 function NotFoundComponent() {
   return (
@@ -79,10 +81,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "OSVRYN — Everyday Layers" },
-      { name: "description", content: "Considered outerwear, trackwear and everyday essentials from OSVRYN." },
+      {
+        name: "description",
+        content: "Considered outerwear, trackwear and everyday essentials from OSVRYN.",
+      },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "OSVRYN — Everyday Layers" },
-      { property: "og:description", content: "Considered outerwear, trackwear and everyday essentials from OSVRYN." },
+      {
+        property: "og:description",
+        content: "Considered outerwear, trackwear and everyday essentials from OSVRYN.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
@@ -127,7 +135,11 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <StoreProvider>
+        <SiteLayout>
+          <Outlet />
+        </SiteLayout>
+      </StoreProvider>
     </QueryClientProvider>
   );
 }
