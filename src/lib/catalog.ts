@@ -49,6 +49,8 @@ export type Order = {
 export const SETTINGS = {
   whatsapp: "",
   deliveryFee: 250,
+  /** Orders at or above this subtotal get free delivery. */
+  freeDeliveryOver: 15000,
   email: "hello@osvryn.com",
   phone: "Add your phone number",
   address: "Add your store address",
